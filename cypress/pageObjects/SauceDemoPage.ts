@@ -27,4 +27,12 @@ export class SauceDemoPage {
   verifyProductLabel(expectedText: string): void {
     cy.get(this.productLabel).should('have.text', expectedText);
   }
+
+    /**
+     * Logs out of the Sauce Demo application.
+     */
+    logout() {
+      cy.get('.bm-burger-button').click();
+      cy.get('#logout_sidebar_link').click();
+    }
 }
