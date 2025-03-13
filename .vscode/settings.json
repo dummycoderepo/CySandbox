@@ -13,13 +13,13 @@
     "text": "Add an emojee in the beginning of the changed file name"
   },
   {
-    "text": "for updated code or refactored code use recycle emojee",
+    "text": "for updated code or refactored code use gear emojee",
   },
   {
-    "text": "for new code use yellow star emojee",
+    "text": "for new code use star emojee",
   },
   {
-    "text": "for code cleanup use bulldozer emojee",
+    "text": "for code cleanup use broom emojee",
   },
   {
     "text": "for documentation use quill emojee",
@@ -32,6 +32,28 @@
   },
   {
     "text": "all the classes should have JSDocs"
+  },
+  {
+    "text": "package.json should have prettier format command"
+  },
+  {
+    "text": "project should have .prettierrc file"
+  },
+  {
+    "text": "npx cypress run or open command should have --browser edge"
+  },
+  {
+    "text": "A method should not have too many params"
+  },
+  {
+    "text":"see if a variable can be declared as const"
+  },
+  {
+    "text": "check if a variable can be inline"
+  },
+  {
+    "text":"check for debug statements like console.log/cy.log"
   }
+  
 ],
 }

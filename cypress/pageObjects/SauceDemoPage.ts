@@ -33,7 +33,7 @@ export class SauceDemoPage {
    * @param {string} productName - The name of the product to select.
    */
   selectProduct(productName: string) {
-    cy.contains('.inventory_item_name', productName).click();
+    cy.contains(".inventory_item_name", productName).click();
   }
 
   /**
@@ -42,5 +42,25 @@ export class SauceDemoPage {
   logout() {
     cy.get(".bm-burger-button").click();
     cy.get("#logout_sidebar_link").click();
+  }
+
+  /**
+   * A dummy method with 5 parameters of any type.
+   * @param {any} param1 - The first parameter.
+   * @param {any} param2 - The second parameter.
+   * @param {any} param3 - The third parameter.
+   * @param {any} param4 - The fourth parameter.
+   * @param {any} param5 - The fifth parameter.
+   * @returns {void}
+   */
+  dummyMethod(
+    param1: any,
+    param2: any,
+    param3: any,
+    param4: any,
+    param5: any
+  ): void {
+    // This is a dummy method and does not perform any actions.
+    console.log(param1, param2, param3, param4, param5);
   }
 }
