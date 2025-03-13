@@ -8,5 +8,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cypress": "^14.2.0",
+    "typescript": "^5.8.2"
+  }
 }
