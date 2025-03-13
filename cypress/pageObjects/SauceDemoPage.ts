@@ -29,6 +29,14 @@ export class SauceDemoPage {
   }
 
   /**
+   * Selects a product by its name.
+   * @param {string} productName - The name of the product to select.
+   */
+  selectProduct(productName: string) {
+    cy.contains('.inventory_item_name', productName).click();
+  }
+
+  /**
    * Logs out of the Sauce Demo application.
    */
   logout() {

@@ -15,4 +15,12 @@ describe('template spec', () => {
     page.login('standard_user', 'secret_sauce');
     page.verifyProductLabel('Product');
   })
+
+  //Add a test that selects a product
+  it('selects a product', () => {
+    cy.visit('https://www.saucedemo.com/v1/')
+    page.login('standard_user', 'secret_sauce');
+    page.verifyProductLabel('Products');
+    page.selectProduct('Sauce Labs Backpack');
+  })
 })
