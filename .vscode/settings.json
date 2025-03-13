@@ -1,7 +1,10 @@
 {
     "github.copilot.chat.commitMessageGeneration.instructions": [
   {
-    "text": "Put commits in this format <name of file changeed>: <what was changed>"
+    "text": "Put commits in this format <name of file changeed> => <what was changed>"
+  },
+  {
+    "text": "If multiple files are changed, put them in a list"
   },
   {
     "text": "Add emojis to make the message more fun"
