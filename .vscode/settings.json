@@ -9,5 +9,13 @@
   {
     "text": "Add emojis to make the message more fun"
   }
-]
+],
+"github.copilot.chat.reviewSelection.instructions": [
+  {
+    "text": "All the functions should have JSDocs with proper return types"
+  },
+  {
+    "text": "all the classes should have JSDocs"
+  }
+],
 }
