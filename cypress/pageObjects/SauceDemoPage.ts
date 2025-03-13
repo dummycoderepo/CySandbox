@@ -3,10 +3,10 @@
  * It contains methods to interact with the login page and verify elements.
  */
 export class SauceDemoPage {
-  userName = '#user-name';
-  password = '#password';
-  loginButton = '#login-button';
-  productLabel = '.product_label';
+  userName = "#user-name";
+  password = "#password";
+  loginButton = "#login-button";
+  productLabel = ".product_label";
 
   /**
    * Logs in to the Sauce Demo application using the provided username and password.
@@ -25,14 +25,14 @@ export class SauceDemoPage {
    * @returns {void}
    */
   verifyProductLabel(expectedText: string): void {
-    cy.get(this.productLabel).should('have.text', expectedText);
+    cy.get(this.productLabel).should("have.text", expectedText);
   }
 
-    /**
-     * Logs out of the Sauce Demo application.
-     */
-    logout() {
-      cy.get('.bm-burger-button').click();
-      cy.get('#logout_sidebar_link').click();
-    }
+  /**
+   * Logs out of the Sauce Demo application.
+   */
+  logout() {
+    cy.get(".bm-burger-button").click();
+    cy.get("#logout_sidebar_link").click();
+  }
 }
