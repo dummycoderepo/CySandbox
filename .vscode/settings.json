@@ -1,0 +1,10 @@
+{
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+  {
+    "text": "Explain clearly which files are changed and why"
+  },
+  {
+    "text": "Add emojis to make the message more fun"
+  }
+]
+}
