@@ -7,7 +7,7 @@
     "text": "If multiple files are changed, add a newline and the name of the file"
   },
   {
-    "text": "Add a line -------------- separator between the files and the message"
+    "text": "Add a line separator between the files and the message"
   },
   {
     "text": "Add an emojee in the beginning of the changed file name"
