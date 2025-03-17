@@ -33,27 +33,10 @@
   {
     "text": "all the classes should have JSDocs"
   },
-  {
-    "text": "package.json should have prettier format command"
-  },
-  {
-    "text": "project should have .prettierrc file"
-  },
-  {
-    "text": "npx cypress run or open command should have --browser edge"
-  },
-  {
-    "text": "A method should not have too many params"
-  },
-  {
     "text":"see if a variable can be declared as const"
-  },
-  {
-    "text": "check if a variable can be inline"
   },
   {
     "text":"check for debug statements like console.log/cy.log"
   }
-  
 ],
 }
