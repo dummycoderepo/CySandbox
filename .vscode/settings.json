@@ -1,6 +1,9 @@
 {
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
+      "text": "If multiple files are changed, put a summary in the first line"
+    },
+    {
       "text": "Put commits in this format <name of file changeed> => <what was changed>"
     },
     {
