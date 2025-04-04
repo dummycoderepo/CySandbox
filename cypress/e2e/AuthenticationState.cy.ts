@@ -12,7 +12,11 @@ describe("Save Auth State for SauceDemo", () => {
 
     // Save local storage and cookies
     cy.window().then((win) => {
-      const storage = {
+      const storage: {
+        localStorage: Storage;
+        sessionStorage: Storage;
+        cookies: Cypress.Cookie[];
+      } = {
         localStorage: win.localStorage,
         sessionStorage: win.sessionStorage,
         cookies: [],

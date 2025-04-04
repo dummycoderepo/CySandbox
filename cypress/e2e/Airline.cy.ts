@@ -24,7 +24,7 @@ it("Verify the airline statuses", function () {
       pollStatus();
 
       //Print row for JetBlue
-      cy.wrap(element).map('innerText').print()
+      cy.wrap(element).map("innerText").print();
     }
   });
 });
