@@ -58,7 +58,7 @@ export class SauceDemoPage {
     param2: any,
     param3: any,
     param4: any,
-    param5: any
+    param5: any,
   ): void {
     // This is a dummy method and does not perform any actions.
     console.log(param1, param2, param3, param4, param5);

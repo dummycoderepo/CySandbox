@@ -1,27 +1,28 @@
 {
-    "github.copilot.chat.commitMessageGeneration.instructions": [
-  {
-    "text": "Put commits in this format <name of file changeed> => <what was changed>"
-  },
-  {
-    "text": "If multiple files are changed, add a newline and the name of the file"
-  },
-  {
-    "text": "Add a line separator between the files and the message"
-  },
-  {
-    "text": "Add an emojee in the beginning of the changed file name"
-  },
-  {
-    "text": "for updated code or refactored code use gear emojee",
-  },
-  {
-    "text": "for new code use star emojee",
-  },
-  {
-    "text": "for code cleanup use broom emojee",
-  },
-  {
-    "text": "for documentation use quill emojee",
-  }]
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Put commits in this format <name of file changeed> => <what was changed>"
+    },
+    {
+      "text": "If multiple files are changed, add a newline and the name of the file"
+    },
+    {
+      "text": "Add a line separator between the files and the message"
+    },
+    {
+      "text": "Add an emojee in the beginning of the changed file name"
+    },
+    {
+      "text": "for updated code or refactored code use gear emojee"
+    },
+    {
+      "text": "for new code use star emojee"
+    },
+    {
+      "text": "for code cleanup use broom emojee"
+    },
+    {
+      "text": "for documentation use quill emojee"
+    }
+  ]
 }
