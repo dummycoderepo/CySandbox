@@ -15,7 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import "./commands";
-import "cypress-map"
+import "cypress-map";
 
 //Overwrite cy.log function
 Cypress.Commands.overwrite("log", (originalFn, message: string) => {

@@ -11,10 +11,7 @@ describe("Log XHR Responses", () => {
     cy.wait("@apiCall").then((interception: Interception) => {
       if (interception.response) {
         expect(interception.response.statusCode).to.be.oneOf([200, 201]);
-        cy.writeFile(
-          "cypress/fixtures/apiResponse.json",
-          interception.response.body,
-        );
+        cy.writeFile("cypress/fixtures/apiResponse.json", interception.response.body);
       } else {
         expect(interception.response).to.exist;
       }

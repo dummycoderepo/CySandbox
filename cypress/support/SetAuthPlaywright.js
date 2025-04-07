@@ -15,12 +15,8 @@ const { chromium } = require("playwright");
     console.log(await page.title()); // Should print "Swag Labs"
 
     //save the local and session storage to a file
-    const localStorageData = await page.evaluate(() =>
-      JSON.stringify(window.localStorage),
-    );
-    const sessionStorageData = await page.evaluate(() =>
-      JSON.stringify(window.sessionStorage),
-    );
+    const localStorageData = await page.evaluate(() => JSON.stringify(window.localStorage));
+    const sessionStorageData = await page.evaluate(() => JSON.stringify(window.sessionStorage));
     const fs = require("fs");
     fs.writeFileSync("localStorage.json", localStorageData);
     fs.writeFileSync("sessionStorage.json", sessionStorageData);
