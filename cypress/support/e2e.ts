@@ -14,17 +14,18 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
+import "cypress-map";
 
 //Overwrite cy.log function
-Cypress.Commands.overwrite('log', (originalFn, message: string) => {
+Cypress.Commands.overwrite("log", (originalFn, message: string) => {
   // Log the message to the console
   //cy.task('log', message);
   // Call the original cy.log to log to the Cypress UI
   originalFn(message);
 });
 
-Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.on("uncaught:exception", (err, runnable) => {
   // returning false here prevents Cypress from failing the test
   return false;
-})
+});

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open --e2e --browser electron"
+    "test": "npx cypress open --e2e --browser electron",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -11,6 +12,10 @@
   "description": "",
   "dependencies": {
     "cypress": "^14.2.0",
+    "cypress-map": "^1.46.0",
     "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
   }
 }

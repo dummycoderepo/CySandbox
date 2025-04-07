@@ -1,5 +1,7 @@
 git branch | grep -v "master" | xargs git branch -d
 
 git branch: Lists all local branches.
+
 grep -v "master": Excludes the master branch from the list.
+
 xargs git branch -d: Deletes each branch listed.
