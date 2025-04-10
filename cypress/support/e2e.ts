@@ -16,6 +16,10 @@
 // Import commands.js using ES2015 syntax:
 import "./commands";
 import "cypress-map";
+import loginData from "../fixtures/dummyData1.json";
+
+//Attach to window object
+window.login = loginData;
 
 //Overwrite cy.log function
 Cypress.Commands.overwrite("log", (originalFn, message: string) => {
