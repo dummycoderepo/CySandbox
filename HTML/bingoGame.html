@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bingo Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .game-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .game-button:hover {
+            background-color: #45a049;
+        }
+        .refresh-btn {
+            background-color: #2196F3;
+        }
+        .refresh-btn:hover {
+            background-color: #1976D2;
+        }
+        .result {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        .bingo {
+            color: #ff4081;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="button-container">
+            <button class="game-button" onclick="handleClick(0)">Button 1 <span class="result" id="result0"></span></button>
+            <button class="game-button" onclick="handleClick(1)">Button 2 <span class="result" id="result1"></span></button>
+            <button class="game-button" onclick="handleClick(2)">Button 3 <span class="result" id="result2"></span></button>
+            <button class="game-button" onclick="handleClick(3)">Button 4 <span class="result" id="result3"></span></button>
+            <button class="game-button" onclick="handleClick(4)">Button 5 <span class="result" id="result4"></span></button>
+            <button class="game-button refresh-btn" onclick="refreshGame()">Refresh</button>
+        </div>
+    </div>
+
+    <script>
+        let bingoIndex = Math.floor(Math.random() * 5);
+        let clicked = new Set();
+
+        function handleClick(index) {
+            if (clicked.has(index)) return;
+            
+            clicked.add(index);
+            const resultElement = document.getElementById(`result${index}`);
+            
+            if (index === bingoIndex) {
+                resultElement.textContent = "Bingo!";
+                resultElement.classList.add('bingo');
+            } else {
+                resultElement.textContent = Math.floor(Math.random() * 100) + 1;
+            }
+        }
+
+        function refreshGame() {
+            clicked.clear();
+            bingoIndex = Math.floor(Math.random() * 5);
+            for (let i = 0; i < 5; i++) {
+                const resultElement = document.getElementById(`result${i}`);
+                resultElement.textContent = '';
+                resultElement.classList.remove('bingo');
+            }
+        }
+    </script>
+</body>
+</html>

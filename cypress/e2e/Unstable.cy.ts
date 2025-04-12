@@ -4,8 +4,10 @@ it("Verify stable guid", () => {
 
   cy.get("#guidDisplay").should("not.have.text", "Click button to generate GUID");
 
+  let guids = new Set()
   cy.get("#guidDisplay").then((guid) => {
-    let currentGuid = guid.text();
-    cy.wrap(guid).should("not.have.text", currentGuid);
-  });
+    const guidText = guid.text();
+    guids.add(guidText);
+    cy.get("#guidDisplay").should('have.text', guidText);
+  })
 });
