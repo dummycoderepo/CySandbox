@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unstable GUID Generator</title>
+    <style>
+        .guid-container {
+            font-family: monospace;
+            font-size: 24px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="guid-container" id="guidDisplay">Click button to generate GUID</div>
+    <button onclick="startGuidGeneration()">Get new guid</button>
+
+    <script>
+        function generateGuid() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0,
+                    v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        function startGuidGeneration() {
+            const display = document.getElementById('guidDisplay');
+            let counter = 0;
+            const finalGuid = generateGuid();
+            
+            const interval = setInterval(() => {
+                display.textContent = generateGuid();
+                counter++;
+                
+                if (counter > 10) { // Will run for about 3.5 seconds
+                    clearInterval(interval);
+                    display.textContent = finalGuid;
+                }
+            }, 300);
+        }
+    </script>
+</body>
+</html>
