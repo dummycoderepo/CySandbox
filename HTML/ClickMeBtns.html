@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Shade Changer</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            transform: scale(1.05);
+        }
+        .clicked {
+            background-color: lightgray;
+        }
+        .reset-button {
+            background-color: lightblue;
+            color: white;
+            font-weight: bold;
+        }
+        .reset-button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="button" onclick="changeShade(this)">Click me</button>
+        <button class="button" onclick="changeShade(this)">Don't click me</button>
+        <button class="button" onclick="changeShade(this)">click me</button>
+        <button class="button" onclick="changeShade(this)">DON'T CLICK ME</button>
+        <button class="button" onclick="changeShade(this)">click Me</button>
+        <button class="button" onclick="changeShade(this)">don't Click Me</button>
+        <button class="button" onclick="changeShade(this)">CLick ME</button>
+        <button class="button" onclick="changeShade(this)">DON't click me</button>
+    </div>
+    <div>
+        <button class="button reset-button" onclick="resetButtons()">Reset Buttons</button>
+    </div>
+    <script>
+        function changeShade(button) {
+            button.classList.add('clicked');
+        }
+
+        function resetButtons() {
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => button.classList.remove('clicked'));
+        }
+    </script>
+</body>
+</html>
