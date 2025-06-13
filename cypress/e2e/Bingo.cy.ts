@@ -4,7 +4,7 @@ it("Bigno", () => {
   let bingoFound = false;
 
   cy.get("button").each((btn, index) => {
-    //cy.then(() => {
+    cy.then(() => {
       if (bingoFound) {
         return; // Stop iterating if bingo is found
       } else {
@@ -19,5 +19,5 @@ it("Bigno", () => {
           });
       }
     });
-  //});
+  });
 });
